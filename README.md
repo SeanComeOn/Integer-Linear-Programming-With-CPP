@@ -1,8 +1,8 @@
-# Integer Linear Programming - Simplex Method with CPP
+# Integer Linear Programming - Simplex and Branch-and-Bound Method with CPP
 
 This project implements the Simplex algorithm for solving **linear programming problems (LP)** and **integer linear programming (ILP)** problems.
 
-The simplex algorithm is implemented with purely elementary row operations on the simplex tabular, without any matrix operations. Integer linear programming is implemented with the branch-and-boudn method, because cutting-plane method seems to be slow.
+The simplex algorithm is implemented with purely elementary row operations on the simplex tabular, without any matrix operations. Integer linear programming is implemented with the branch-and-bound method, because cutting-plane method seems to be slow.
 
 This project features:
 - pure C++ implementation
@@ -128,7 +128,7 @@ std::vector<std::vector<double>> constraints = {
 std::vector<double> rhs = {4, 2, 3, 6};
 
 // Create a Simplex object
-Simplex simplex(constraints, rhs, objective); // false indicates minimization
+Simplex simplex(constraints, rhs, objective);
 
 // Solve the linear programming problem
 simplex.solve();
